@@ -1,11 +1,9 @@
-const baseurl = 'http://localhost:3000'
-let weatherEndpoint = new URL('weather',baseurl)
+let weatherEndpoint = '/weather'
 const loadingP = document.getElementById('loading-p')
 
 function weatherFetch(city,cb){
     let param = new URLSearchParams({city})
     let url = weatherEndpoint + '?' + param
-    //let url = 'http://puzzle.mead.io/puzzle'
     loadingP.innerText = 'Loading...'
     fetch(url)
     .then((res)=>{

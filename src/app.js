@@ -6,6 +6,7 @@ const weather_utils = require('./weather/utils').module
 const { callbackify } = require('util')
 
 const app = express()
+const PORT = process.env.PORT || 3000
 
 const publicDirPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -159,4 +160,4 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => console.log('Started on 3000'))
+app.listen(PORT, () => console.log(`Started on ${PORT}`))
