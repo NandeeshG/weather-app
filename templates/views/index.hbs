@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/media/weather.png">
     <script src="/js/app.js" defer></script>
 </head>
 
 <body>
-    {{>header}}
+    <div class="main-container">
+        {{>header}}
+        <p class="text-center">{{indexText}}</p>
+        <form class="text-center">
+            <input id="city" placeholder="City Name" type="text">
+            <button type="submit">Get Weather</button>
+            <p id="loading-p"></p>
+        </form>
+        <div id="search-results" class="text-center"></div>
+    </div>
     {{>footer}}
 </body>
 
