@@ -160,4 +160,4 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(PORT, () => console.log(`Started on ${PORT}`))
+app.listen(PORT, () => console.log(`Started on http://localhost:${PORT}`))
